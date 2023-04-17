@@ -25,8 +25,8 @@ def xss_2():
 
 @app.route("/xss_3", methods = ['GET'])
 def xss_3():
-    # user_id = request.cookies.get('UserID')
-    return "<p>Welcome to our app %s!" % 'dave' # user_id 
+    user_id = request.cookies.get('UserID')
+    return "<p>Welcome to our app %s!" % user_id 
 
 @app.route("/code_injection_1", methods = ['GET', 'POST'])
 def code_injection_1():
